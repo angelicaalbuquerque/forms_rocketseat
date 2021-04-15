@@ -25,7 +25,7 @@
 ## 📚 Sobre
 
 <p>
-Criado pela <a href="https://rocketseat.com.br/" target="_blank">Rocketseat</a>, "HTML que faz sentido, para todos" é um curso livre para aprendizado da linguaguem de marcação HTML, com foco em formulários.
+Criado pela <a href="https://rocketseat.com.br/" target="_blank">Rocketseat</a>, "Formulários de outro planeta" é um curso livre para aprendizado da linguaguem de marcação HTML, com foco em formulários.
 
 Lecionado por Mayk Brito, o curso mostra como funcionam os formulários, como criar sua estrutura, como utilizar diversos tipos de dados de entrada para fornecer uma experiência muito melhor para o usuário ao interagir com um formulário.
 
