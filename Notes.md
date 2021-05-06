@@ -59,6 +59,27 @@ Exemplo:
 
 ### Label
 
+Essa tag serve para associar e identificar uma (ou mais) tags de entrada de dados.
+
+É ótima para a acessibilidade, até mesmo pela possibilidade de clicar para mudar o foco da entrada de dados.
+
+```html
+<label>
+  Nome:
+  <input type="text" />
+  Razão Social:
+  <input type="text" />
+</label>
+```
+
+Caso eu queira colocar o input fora do label, é necessário utilizar o atributo "for" para fazer a conexão entre este label e a tag de entrada de dados. Essa conexão é feita via id do input.
+
+```html
+<label for="nome">Nome: </label> <input id="nome" type="text" />
+```
+
+Essa forma funciona com elementos específicos, como: button, input (not hidden), meter, output, progress, select e textarea.
+
 ### Button
 
 ### Datalist
