@@ -82,6 +82,49 @@ Essa forma funciona com elementos específicos, como: button, input (not hidden)
 
 ### Button
 
+Button representa um botão.
+
+Primariamente, é usado para enviar formulários, mas também tem outros usos e é estilizado pelo user agent (navegador), mas, claro, pode-se usar CSS para alterá-lo.
+
+Atributos comuns:
+
+- type
+  - submit (enviar o formulário)
+  - reset (limpar o formulário)
+  - button (alguns navegadores entendem que o button também envia o formulário)
+- autofocus (primeiro autofocus, elemento fica focado)
+- disabled (botão visível, mas desabilitado)
+- name (nome do button)
+- value (usado junto ao name, opcionalmente, para quando submeter o formulário o valor ser recebido dentro de algo que tenha aquele name)
+- form (linka a um formulário qualquer)
+
+Exemplos:
+
+```html
+<button type="submit">Enviar</button>
+```
+
+```html
+<button autofocus>Enviar</button>
+```
+
+```html
+<button disabled>Enviar</button>
+```
+
+```html
+<form>
+  <input type="text" value="Pesquisar..." />
+  <button type="reset">Limpar</button>
+</form>
+```
+
+```html
+<form action="" id="meu-form"></form>
+
+<button type="submit" form="meu-form">Enviar</button>
+```
+
 ### Datalist
 
 ## Tags de Entrada de Dados
