@@ -127,4 +127,62 @@ Exemplos:
 
 ### Datalist
 
+É tag estrutural para os formulários. Fornece ao usuário uma lista de valores como sugestão a uma tag `<input>`.
+
+Os valores são sugestivos e não obrigatórios.
+Os usuários podem selecionar um dos valores ou colocar um calor diferente da sugestão.
+
+```html
+<input type="text" list="fruitsdata" placeholder="Escolha uma fruta" />
+
+<datalist id="fruitsdata">
+  <option>apple</option>
+  <option>banana</option>
+  <option>mango</option>
+  <option>orange</option>
+  <option>cherry</option>
+</datalist>
+```
+
+O valor `id` de um `<datalist>` é muito importante, pois o atributo `list` recebe esse `id` de um `<datalist>` residente no mesmo documento:
+
+```html
+<input type="color" list="colorsdata" />
+
+<datalist id="colorsdata">
+  <option>##FF0000</option>
+  <option>#00FF00</option>
+  <option>#0000FF</option>
+</datalist>
+```
+
+#### Tipos de input suportados
+
+- text;
+- search;
+- url;
+- tel;
+- email;
+- date;
+- month;
+- week;
+- time;
+- datetime-local;
+- number;
+- range;
+- color.
+
+Os valores de datalist que não são compatíveis com o tipo do `<input>` não serão apresentados.
+
+#### Tipos de input NÃO suportados
+
+- hidden;
+- password;
+- checkbox;
+- radio;
+- file;
+- qualquer tipo de button.
+
+Para verificar a compatibilidade com o browser, pode-se pesquisar no endereço [http://caniuse.com](http://caniuse.com).
+
 ## Tags de Entrada de Dados
