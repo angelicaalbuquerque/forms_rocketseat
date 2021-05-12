@@ -186,3 +186,110 @@ Os valores de datalist que não são compatíveis com o tipo do `<input>` não s
 Para verificar a compatibilidade com o browser, pode-se pesquisar no endereço [http://caniuse.com](http://caniuse.com).
 
 ## Tags de Entrada de Dados
+
+### Input
+
+Uma das tags mais usadas em formulários, a tag `input` aceita os mais diversos tipos de dados. Apesar disso, por ter um elevado número de combinações, é uma das tags mais poderosas e complexas.
+
+Atributos comuns de controle:
+
+- type (define o tipo do input e é obrigatório);
+- name;
+- id.
+
+#### Input atributos comuns
+
+_[quase todos = alguns tipos de campos não vão aceitá-los]_
+
+**Autocomplete**: Automaticamente vai completar uma informação que já foi utilizada algumas vezes antes. No caso abaixo, o e-mail seria autocompletado.
+
+```html
+<input type="text" autocomplete="email" />
+```
+
+**Autofocus**: Automaticamente o elemento vai ser focado, vai receber o cursor piscando. É permitido apenas um por página porque o navegador vai pegar apenas o primeiro para focar.
+
+```html
+<input type="text" autofocus />
+```
+
+**Disabled**: Atributo que vai deixar um campo desabilitado.
+
+```html
+<input type="text" disabled />
+```
+
+**Readonly** _(quase todos)_: Somente exibe para leitura o campo. A diferença para o disabled é que o disabled, além de ser só para leitura, fica com aspecto opaco.
+
+```html
+<input type="text" value="texto" readonly />
+```
+
+**Value**: Valor "padrão" escrito no campo input.
+
+```html
+<input type="text" value="pesquisar" />
+```
+
+**form** _(quase todos)_: linka o input com algum formulário, caso o formulário esteja fora. Por exemplo, tem-se um input que você gostaria de deixar em outro lugar da sua página, mas enviar os dados, gostaria de enviar com as informações desse formulário.
+
+**name**: Para enviar esses dados para um outro formulário, é necessário utilizar um outro atributo, chamado name. Sem ele no input, teremos problemas ao resgatar esses dados do input em outro momento, como no backend.
+
+```html
+<form id="meu-form">
+  <input type="email" name="email" form="meu-form" />
+</form>
+```
+
+**required** _(quase todos)_: Significa que o campo específico é obrigatório de preenchimento para ser enviado. Pode ser utilizado em mais de um campo.
+
+```html
+<input type="email" required />
+```
+
+**placeholder** _(quase todos)_: Utilizados em campos específicos, como: password, searh, tel, text e url.
+
+```html
+<input type="password" placeholder="Digite sua senha" />
+```
+
+#### Placeholder com Label
+
+O label serve para a acessibilidade. Se a pessoa tem a necessidade do leitor de tela, o leitor sabe que esse label/for tem a ver com o input e-mail.
+
+Então, mesmo tendo um placeholder objetivo, o label é importante ser usado.
+
+```html
+<label for="email">E-mail</label>
+<input type="email" placeholder="Digite seu e-mail" />
+```
+
+### Password
+
+### Email
+
+### URL
+
+### File
+
+### Color
+
+### Checkbox
+
+### Hidden
+
+### Radio
+
+### Textarea
+
+### Select
+
+### Optgroup
+
+### Search
+
+### Number
+
+### Range
+
+### Data e hora
