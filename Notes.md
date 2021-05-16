@@ -266,6 +266,47 @@ Então, mesmo tendo um placeholder objetivo, o label é importante ser usado.
 
 ### Password
 
+Com `<input type="password">`, podemos colocar senhas de maneiras mais seguração na aplicação, uma vez que esse tipo cria uma máscara para esconder o que é digitado no campo -- lembrando sempre que o estilo da apresentação do campo é aplicado pelo User Agent, caso não existe nenhuma personalização para o mesmo.
+
+#### Atributos
+
+- minlength / maxlength <br>
+  O número mínimo e máximo de caracteres para este campo.<br><br>
+- size <br>
+  "Maneira visual" de apresentar número aceitável de caracteres que esse campo deve conter.<br><br>
+- pattern <br>
+  Expressão regular para validar o que está sendo digitado no campo. Altamente recomendado para o uso de um padrão de segurança alto de senhas. Por exemplo: senhas que contenham caracteres hexadecimais (de 0 a 9, de A a F), com o limite de no mínimo 4 caracteres e no máximo 8 caracteres.<br>
+  Ou seja, o pattern é poderoso por usar expressões regulares para executar essa validação: `pattern="[0-9a-fA-F]{4,8}"`
+  <br><br>
+- placeholder<br>
+  Mostra um exemplo do texto a ser digitado no campo.<br><br>
+- readonly / disabled<br>
+  Atributo booleano indicando se o campo está habilitado ou não.<br><br>
+- required<br>
+  Campo obrigatório.
+- inputmode<br>
+  Poderá alterar o uso do teclado em smartphones. Por exemplo: queremos que o cliente só adicione número, para isso, usamos: `inputmode="numeric"`.<br><br>
+- autocomplete<br>
+  Quando on: permite a sugestão de new-password ou current-password (se já tiver senha cadastrada). Quando off: desabilita a opção de autocompletar. Já utilizando "new-password" o navegador poderá sugerir uma nova senha ao usuário.
+
+Exemplo:
+
+```html
+<form action="">
+  <input type="password"
+  minlength="4"
+  maxlength="8"
+  size="8"
+  pattern="[0-9a-fA-F]{4,8}"
+  title="Coloque HEX no mínimo com 4 caracteres e no máximo 8 caracteres"
+  placeholder="Digite sua senha"
+  inputmode="numeric"
+  autocomplete="on"
+  >
+  <button type="submit">
+</form>
+```
+
 ### Email
 
 ### URL
