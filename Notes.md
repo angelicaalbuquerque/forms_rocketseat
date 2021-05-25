@@ -309,6 +309,42 @@ Exemplo:
 
 ### Email
 
+Usando `<input type="email">`, espera-se que o usuário digitel um e-mail. O valor digitado será validado se é referente a um e-mail.
+
+#### Atributos
+
+- placeholder;
+- readonly / disabled;
+- value;
+- required;
+- multiple (campo receberá 1 ou mais e-mails, separados por vírgulas);
+- minlength / maxlength (valor mínimo/máximo que o campo conterá);
+- size (valor numério indicando quantos carecteres esse campo deveria conter, modificando o tamnanho do campo para o usuário);
+- pattern (uso de expressão regular para validar o campo, uma sequência de caracteres que serão aceitos e usados para validar se está compatível com a sequência de carecteres. Exemplo: o usuário só poderá colocar e-mail de domínio específico: `pattern=[.+@nomedosite\.com\.br`);
+- list (o `id` de uma tag `<datalist>` que está no mesmo documento, contendo uma lista de valores pré-definidos como sugestão para o usuário. Os valores do `<datalist>` que não forem compatíveis com o campo, não serão apresentados como sugestão).
+
+```html
+<form action="">
+  <datalist id="emails">
+    <option>email1@nomedosite.com.br</option>
+    <option>email2@nomedosite.com.br</option>
+    <option>email3@nomedosite.com.br</option>
+  </datalist>
+
+  <input
+    type="email"
+    placeholder="E-mail"
+    required
+    multiple
+    size="25"
+    title="Somente e-mails nomedosite.com.br serão aceitos"
+    pattern=".+@nomedosite\.com\.br"
+    list="emails"
+  />
+  <button type="submit">Enviar</button>
+</form>
+```
+
 ### URL
 
 ### File
