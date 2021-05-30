@@ -347,6 +347,46 @@ Usando `<input type="email">`, espera-se que o usuário digitel um e-mail. O val
 
 ### URL
 
+O tipo de input URL espera que o usuário digite uma URL e valida se o valor digitado é compatível.
+
+```html
+<input type="url" />
+```
+
+Seus atributos são:
+
+- placeholder;
+- value;
+- readonly / disabled;
+- required;
+- minlength/maxlength;
+- size;
+- pattern (validação com a expressão regular. Exemplo: usuário só poderá colocar domínio ".com.br" -- `pattern=".*\.com\.br\/.*` -- a leitura de `.\*` é "qualquer caractere múltiplas vezes);
+- list;
+- spellcheck (habilita a verificação ortográfica para este input -- se não atribuo true ou false, ele puxa do elemento parent e alguns navegadores já vão deixar habilitados como padrão).
+
+```html
+<datalist id="urlsdata">
+  <option>https://meusite.com.br</option>
+  <option>https://seusite.com.br</option>
+  <option>https://qualquersite.com.br</option>
+</datalist>
+
+<form action="">
+  <input
+    type="url"
+    placeholder="http://example.com.br"
+    pattern=".*\.com\.br.*"
+    title="Somente domínios '.com.br' serão aceitos"
+    required
+    size="30"
+    list="urlsdata"
+    spellcheck="false"
+  />
+  <button type="submit">Enviar</button>
+</form>
+```
+
 ### File
 
 ### Color
