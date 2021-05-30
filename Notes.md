@@ -389,6 +389,34 @@ Seus atributos são:
 
 ### File
 
+```html
+<input type="file" />
+```
+
+Com esse tipo, o usuário pode escolher um ou mais arquivos para anexar ao formulário e enviar.
+
+Seus atributos são:
+
+- value (contém o arquivo a ser enviado);
+- accept (descreve quais tipos de arquivos são aceitos, como: .doc, .pdf, audio/\*, image/png, .png) - vai enviar somente um valor, mesmo se for múltiplo;
+- files (lista de arquivo ou arquivos) - onde vai ter a lista dos múltiplos arquivos ainda que se envie somente um;
+- multiple (permite envio de múltiplos arquivos, é uma chave boolean. Se não tivesse o multiple, só conseguiria enviar um arquivo por vez).
+
+Para enviar os arquivos, o formulário deverá utilizar o método POST e o atribuo `enctype` como "multipart/form-data". Isso é usado SOMENTE no tipo file.
+
+```html
+<form action="">
+  <input
+    type="file"
+    accept="image/*"
+    multiple
+    method="POST"
+    enctype="multipart/form-data"
+  />
+</form>
+<button type="submit">Enviar</button>
+```
+
 ### Color
 
 ### Checkbox
