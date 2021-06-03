@@ -599,8 +599,54 @@ Quando os valores forem passados para o backend, ficarão guardados como `pets=d
 
 ### Search
 
-```html
+`<input type="search"/>`
 
+Esse tipo de input serve para campos de busca, uma vez que "search" signifca "pesquisa".
+
+É igual ao campo do tipo "text", mas poderá ser um pouco diferente dependendo do User Agent.
+
+Seus atributos são:
+
+- list / `<datalist>`
+- pattern
+- aria-label
+
+**aria-label**: quando não temos o label, o `aria-label` é uma opção para ser utilizado e fazer com que leitores de tela consigam identificar o que está escrito naquele campo.
+
+```html
+<datalist id="search-terms">
+  <option>Mac</option>
+  <option>Windows</option>
+  <option>Linux</option>
+</datalist>
+
+<form>
+  <input
+    type="search"
+    name=""
+    list="search-terms"
+    placeholder="Digite seu termo de busca..."
+    size="30"
+    aria-label="campo de pesquisa: digite seu termo de busca"
+  />
+  <button>Pesquisar</button>
+</form>
+```
+
+**pattern**: É um atributo que espera receber uma expressão regular. É uma estrutura de textos que fará uma busca por semelhança. Se o que eu digitar dentro do campo for igual a estrutura do pattern, então será válida a pesquisa, por exemplo.
+
+```html
+<form>
+  <label for="">Pesquisar pelo ID</label>
+  <input
+    type="search"
+    name="ID"
+    size="10"
+    pattern="[0-9]{2}"
+    title="Digite o número do ID com dois números. Exemplo: 99"
+  />
+  <button>Pesquisar</button>
+</form>
 ```
 
 ### Number
