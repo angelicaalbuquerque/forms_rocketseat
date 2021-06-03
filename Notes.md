@@ -444,6 +444,38 @@ A tag color não está disponível ao IE e outros navegadores no Android, como C
 
 ### Checkbox
 
+São caixinhas que podem ser marcadas. Ou seja, a pessoa seleciona um valor para ser enviado. Caso nenhum valor seja selecionado, não será enviado nenhum dado.
+
+Os atributos são:
+
+- globais
+- value
+  - valor que aquele campo contém
+  - se não estive presente, o padrão é "on"
+- checked
+  - para deixar o campo marcado por padrão
+
+```html
+<label for="subscribe">Receber notificações</label>
+<input type="checkbox" name="subscribe" id="subscribe" checked />
+```
+
+Para múltiplos valores, utilizamos o atributo name igual:
+
+```html
+<fieldset>
+  <legend>Choose your interests</legend>
+  <div>
+    <input type="checkbox" id="music" name="interest" value="music" checked />
+    <label for="music">Music</label>
+  </div>
+  <div>
+    <input type="checkbox" id="coding" name="interest" value="coding" />
+    <label for="coding">Coding</label>
+  </div>
+</fieldset>
+```
+
 ### Hidden
 
 ### Radio
