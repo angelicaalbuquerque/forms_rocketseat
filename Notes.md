@@ -492,14 +492,53 @@ Por exemplo, se quero receber o horário que o formulário foi enviado e não de
 
 ### Radio
 
-```html
+Projeto para selecionar uma única opção de um grupo de opções.
 
+Os atributos essenciais são:
+
+- checked (indicando o campo que foi marcado)
+- value (valor que aquele campo contém)
+
+```html
+<fieldset>
+  <legend>Let's have a coffee?</legend>
+  <input type="radio" name="coffee" id="yep" value="yes" checked />
+  <label for="stay">Yes</label>
+
+  <input type="radio" name="coffee" id="nope" value="no" />
+  <label for="go">No</label>
+</fieldset>
 ```
 
 ### Textarea
 
-```html
+O elemento `<textarea>` é bastante útil para quando precisamos criar campos que necessitem de mais de uma linha, ou seja, é muito utilizado para textos grandes, como caixas para "observações".
 
+Seus atributos são:
+
+- ID (identificar o textarea)
+- name (ao enviar o formulário, na recepção o dado chegará com o valor através do name)
+- rows e cols
+- maxlength / minlength
+- wrap (wrap="soft", que é o padrão, ou wrap="off")
+- e outros comuns aos inputs:
+  - autocomplete, autofocus, disabled, placeholder, readonly, form, required
+
+Lembrando que quando eu tiver um `<label for=""></label>`, o ID vai ser ligado a esse for.
+
+```html
+<label for="message">Mensagem</label>
+
+<textarea
+  name="message"
+  id="message"
+  cols="25"
+  rows="5"
+  maxlength="140"
+  minlength="4"
+  wrap="on"
+  placeholder="Digite sua mensagem aqui..."
+></textarea>
 ```
 
 ### Select
@@ -510,10 +549,30 @@ Por exemplo, se quero receber o horário que o formulário foi enviado e não de
 
 ### Optgroup
 
+```html
+
+```
+
 ### Search
+
+```html
+
+```
 
 ### Number
 
+```html
+
+```
+
 ### Range
 
+```html
+
+```
+
 ### Data e hora
+
+```html
+
+```
