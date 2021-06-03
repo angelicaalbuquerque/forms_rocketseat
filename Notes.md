@@ -651,8 +651,21 @@ Seus atributos são:
 
 ### Number
 
-```html
+Semelhante ao tipo texto, mas aceita somente a entrada de números.
 
+Seus atributos, por exemplo, são:
+
+- min/max
+- step (pula os números de acordo com o step)
+- placeholder
+- list (linkado com datalist, que terá um ID)
+- disabled...
+
+```html
+<form>
+  <input type="number" min="5" max="50" step="5" />
+  <button>Enviar número</button>
+</form>
 ```
 
 ### Range
