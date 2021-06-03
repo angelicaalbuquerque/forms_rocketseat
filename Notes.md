@@ -419,6 +419,29 @@ Para enviar os arquivos, o formulário deverá utilizar o método POST e o atrib
 
 ### Color
 
+É uma interface para selecionar cor, ou seja, é um color picker.
+
+Seus atributos são:
+
+- value (RGB)
+  - se a cor for inválida/errada, o preto será exibido, bem como se nenhum value for setado.
+- list
+  - O id de uma tag `<datalist>` que está no mesmo documento. Irá conter uma lista de valores pré-definidos para ajudar o usuário.
+
+```html
+<datalist id="colorssdata">
+  <option>#0000FF</option>
+  <option>#550226</option>
+  <option>#457601</option>
+</datalist>
+
+<form action="">
+  <input type="color" value="#FF0254" list="colorssdata" />
+</form>
+```
+
+A tag color não está disponível ao IE e outros navegadores no Android, como Chrome e Firefox.
+
 ### Checkbox
 
 ### Hidden
