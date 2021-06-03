@@ -478,11 +478,35 @@ Para múltiplos valores, utilizamos o atributo name igual:
 
 ### Hidden
 
+Campo invisível ao usuário, mas será enviado com o formulário.
+
+É um campo que não recebe focus e leitores de tela não percebem esse campo.
+
+Para utilizar, basta criar um campo tipo `hidden`.
+
+Por exemplo, se quero receber o horário que o formulário foi enviado e não deixar o usuário ver isso:
+
+```html
+<input type="hidden" id="timestamp" name="timestamp" value="1286705410" />
+```
+
 ### Radio
+
+```html
+
+```
 
 ### Textarea
 
+```html
+
+```
+
 ### Select
+
+```html
+
+```
 
 ### Optgroup
 
