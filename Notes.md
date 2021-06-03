@@ -543,8 +543,33 @@ Lembrando que quando eu tiver um `<label for=""></label>`, o ID vai ser ligado a
 
 ### Select
 
-```html
+O elemento `<select>` é um controle que fornece um menu de opções.
 
+Já o elemento `<option>` faz parte do `<select>` e traz as opções a serem selecionadas. Possui "value" como atribuo necessário.
+
+Ao ser selecionado o valor "não", por exemplo, ele ficará guardado e será enviado pelo formulário ao backend. Algo como `answerselect=nao`.
+
+```html
+<label for="answerselect"></label>
+<select name="answer" id="answerselect">
+  <option value="">Selecione sua resposta</option>
+  <option value="sim">Sim</option>
+  <option value="nao">Não</option>
+  <option value="talvez">Talvez</option>
+</select>
+```
+
+Para habilitar multiplas opções, basta utilizar o atributo `multiple` no select. Já utilizando `size`, deixo visível quantas opções quero que apareçam:
+
+```html
+<label for="carselect">Fábricas de carros</label> <br /><br />
+<select name="carmodel" id="carselect" multiple size="2">
+  <option value="">Selecione</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+  <option value="toyota">Toyota</option>
+  <option value="bmw">BMW</option>
+</select>
 ```
 
 ### Optgroup
