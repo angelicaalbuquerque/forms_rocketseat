@@ -574,9 +574,28 @@ Para habilitar multiplas opções, basta utilizar o atributo `multiple` no selec
 
 ### Optgroup
 
-```html
+Sempre vai funcionar dentro do select, pois fará um agrupamento de várias opções dentro dos selects.
 
+É importante sempre colocar o label dentro de optgroup para que a formatação não seja impactada negativamente.
+
+```html
+<label>Please choose one or more pets:</label> <br /><br />
+<select name="pets" size="6" multiple>
+  <optgroup label="4-legged pets">
+    <option value="dog">Dog</option>
+    <option value="cat">Cat</option>
+    <option value="cow">Cow</option>
+    <option value="rat" disabled>Rat</option>
+  </optgroup>
+  <optgroup label="Flying pets">
+    <option value="parrot">Parrot</option>
+    <option value="macaw">Macaw</option>
+    <option value="albatross">Albatross</option>
+  </optgroup>
+</select>
 ```
+
+Quando os valores forem passados para o backend, ficarão guardados como `pets=dog,cat,parrot`.
 
 ### Search
 
