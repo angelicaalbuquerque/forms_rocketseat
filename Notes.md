@@ -670,8 +670,17 @@ Seus atributos, por exemplo, são:
 
 ### Range
 
-```html
+O input com tipo range é utilizado para controle de seleção de um valor numérico. Pode ser um slider ou um dial control, ou seja, não vai trazer muita precisão numérica.
 
+Seus atributos básicos são:
+
+- min/max
+- step
+
+```html
+<form>
+  <input type="range" min="1" max="100" step="1" value="50" />
+</form>
 ```
 
 ### Data e hora
