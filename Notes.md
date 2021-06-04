@@ -685,6 +685,48 @@ Seus atributos básicos são:
 
 ### Data e hora
 
-```html
+Apesar de ainda não ter um suporte para todos os navegadores, existem alguns campos bem interessantes para serem utilizados em formulários.
 
+Para se atentar ao que deve ou não funcionar, é recomendado acessar o site https://caniuse.com/.
+
+Geralmente, são campos de data que não possuem muito suporte, especialmente na parte do Safari. Exemplos:
+
+Date
+
+```html
+<input type="date" />
 ```
+
+_Uma dica, caso não funcione como você gostaria, é utilizar selects para cada data, mês e ano. O campo de dias, por exemplo, um select de 1 a 31. Seriam três campos divididos._
+
+Datetime
+
+```html
+<input type="datetime-local" />
+```
+
+_Traz dia, mês, ano e também o horário._
+
+Month
+
+```html
+<input type="month" />
+```
+
+_Seleciona somente os meses._
+
+Time
+
+```html
+<input type="time" />
+```
+
+_Seleciona somente o horário._
+
+Week
+
+```html
+<input type="week" />
+```
+
+_Seleciona somente a semana._
