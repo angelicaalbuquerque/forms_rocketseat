@@ -730,3 +730,9 @@ Week
 ```
 
 _Seleciona somente a semana._
+
+### Desenhe seus forms
+
+Esse é um passo para ajudar no processo de implementação de um formulário. Desenhar ajuda a definir as necessidades reais e a pensar nos requisitos.
+
+Um bom formulário deve ser simples e focado, melhorando a experiência do usuário. O formulário deve ter somente os dados necessários e, uma dica, é verificar o que é agradável em um formulário quando for preenchê-lo.
